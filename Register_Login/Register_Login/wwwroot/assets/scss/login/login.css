@@ -1,0 +1,585 @@
+#top-side {
+  width: 100%;
+  height: 100px;
+  background-color: #3242b7;
+}
+#top-side .logo {
+  margin-left: 180px;
+  margin-top: 22px;
+}
+#top-side .welcome {
+  border-right: 1px solid #464444;
+  height: 44px;
+  width: 178px;
+}
+#top-side .welcome span {
+  line-height: 40px;
+  vertical-align: middle;
+  color: white;
+}
+#top-side .language {
+  border-right: 1px solid #464444;
+}
+#top-side .language .button1 {
+  border-radius: 0px;
+  background-color: #3242b7;
+  border: 0px;
+  position: relative;
+  top: 25px;
+}
+#top-side .country {
+  border-right: 1px solid #464444;
+}
+#top-side .country .button2 {
+  border-radius: 0px;
+  background-color: #3242b7;
+  border: 0px;
+  position: relative;
+  top: 25px;
+}
+#top-side .country ul img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  left: 10px;
+}
+#top-side .country ul li {
+  margin: 6px;
+}
+#top-side .country .usa-flex {
+  display: flex;
+}
+#top-side .country .nzd-flex {
+  display: flex;
+}
+#top-side .country .gmd-flex {
+  display: flex;
+}
+#top-side .country .ilr-flex {
+  display: flex;
+}
+#top-side .country .eur-flex {
+  display: flex;
+}
+#top-side .country .inr-flex {
+  display: flex;
+}
+#top-side .basket,
+#top-side .heart {
+  position: relative;
+  width: 46px;
+  height: 44px;
+  border-right: 1px solid #464444;
+}
+#top-side .basket i,
+#top-side .heart i {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+#top-side .profile {
+  border-right: 1px solid #464444;
+}
+#top-side .profile .btn-secondary {
+  background-color: #3242b7;
+  border-color: #3242b7;
+}
+#top-side .profile img {
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+#top-side .circles {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: rgb(255, 85, 0);
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+#top-side .circles sup {
+  margin-left: 3px;
+  color: white;
+  font-weight: 500;
+  top: 0.5em;
+}
+#top-side .dropdown-menu .profile-i {
+  display: flex;
+}
+#top-side .dropdown-menu .account-i {
+  display: flex;
+}
+#top-side .dropdown-menu .message-i {
+  display: flex;
+}
+#top-side .dropdown-menu .logout-i {
+  display: flex;
+}
+#top-side .dropdown-menu i {
+  position: relative;
+  left: 10px;
+  top: 8px;
+  font-size: 20px;
+}
+#top-side .navbar-logo {
+  display: flex;
+  justify-content: space-between;
+}
+#top-side .navbar-logo .input-search {
+  padding: 6px 0;
+  background-color: #fff;
+  border-radius: 4px 0 0 4px;
+  position: relative;
+}
+#top-side .navbar-logo .input-search input {
+  border: none;
+  padding: 6px 20px;
+  width: 520px;
+}
+
+#navbar {
+  background-color: #283593;
+}
+#navbar .container {
+  width: 100%;
+  height: 50px;
+  background-color: #283593;
+  margin-left: 23px;
+}
+#navbar nav {
+  position: absolute;
+  left: 0;
+  padding-left: 260px;
+}
+#navbar .btn {
+  display: flex;
+  margin-top: 3px;
+}
+#navbar .btn li {
+  list-style: none;
+  margin-right: 15px;
+}
+#navbar .btn li:hover .home {
+  height: 150px;
+  width: 200px;
+}
+#navbar .btn li:hover .home li {
+  text-align: left;
+}
+#navbar .btn li:hover .shop {
+  height: 170px;
+  width: 200px;
+}
+#navbar .btn li:hover .categories {
+  height: 270px;
+  width: 850px;
+}
+#navbar .btn li:hover .categories li {
+  text-align: left;
+}
+#navbar .btn li:hover a::before {
+  visibility: visible;
+  transform: scale(1, 1);
+}
+#navbar .btn li .home {
+  height: 130px;
+  width: 200px;
+}
+#navbar .btn li .shop {
+  height: 170px;
+  width: 200px;
+}
+#navbar .btn li .categories {
+  height: 270px;
+  width: 1000px;
+  display: flex;
+  gap: 100px;
+  text-align: left;
+}
+#navbar .btn li .submenu {
+  overflow: hidden;
+  position: absolute;
+  top: 57px;
+  background-color: whitesmoke;
+  height: 0;
+  line-height: 50px;
+  transition: height 0.3s ease-in-out;
+  transition-delay: 0.1s;
+  border-radius: 5px;
+  z-index: 2;
+}
+#navbar .btn li .submenu > li {
+  display: block;
+  text-align: left;
+}
+#navbar .btn li .submenu a {
+  color: black;
+  margin-top: 20px;
+  font-size: 16px;
+  text-decoration: none;
+}
+#navbar .btn li .submenu a:hover {
+  text-decoration: none;
+}
+#navbar .btn li .submenu .product1 {
+  padding-top: 20px;
+}
+#navbar .btn li .submenu .product1 h5 {
+  color: rgb(49, 97, 231);
+  text-align: left;
+}
+#navbar .btn li .hov {
+  font-size: 18px;
+  color: white;
+  display: block;
+  padding: 0 15px 0 7px;
+  margin: 0 0 10px;
+  text-decoration: none;
+  position: relative;
+}
+#navbar .btn li .hov::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -20px;
+  left: 0px;
+  background-color: rgb(255, 85, 0);
+  transition: all 0.3s ease-in-out;
+  transform: scale(0, 0);
+  visibility: hidden;
+}
+
+#login {
+  /* general styling */
+}
+#login .portfolio-experiment a {
+  color: black;
+  padding: 0.7em calc(0.7em * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+}
+#login .portfolio-experiment a .text {
+  font-family: proxima-nova, monospace;
+  transform: translate3d(0, 0.7em, 0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+#login .portfolio-experiment a:after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: calc(0.7em * 1.2);
+  right: calc(0.7em * 1.2);
+  height: 3px;
+  background: #f26522;
+  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transform-origin: left;
+}
+#login .portfolio-experiment .line {
+  position: absolute;
+  background: #f26522;
+}
+#login .portfolio-experiment .line.-right, #login .portfolio-experiment .line.-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1, 0, 1);
+}
+#login .portfolio-experiment .line.-top, #login .portfolio-experiment .line.-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0, 1, 1);
+}
+#login .portfolio-experiment .line.-right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transform-origin: top;
+}
+#login .portfolio-experiment .line.-top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: left;
+}
+#login .portfolio-experiment .line.-left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+#login .portfolio-experiment .line.-bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transform-origin: right;
+}
+#login .portfolio-experiment a:hover .text,
+#login .portfolio-experiment a:active .text {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+#login .portfolio-experiment a:hover:after,
+#login .portfolio-experiment a:active:after {
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+}
+#login .portfolio-experiment a:hover .line,
+#login .portfolio-experiment a:active .line {
+  transform: scale3d(1, 1, 1);
+}
+#login .portfolio-experiment a:hover .line.-right,
+#login .portfolio-experiment a:active .line.-right {
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transform-origin: bottom;
+}
+#login .portfolio-experiment a:hover .line.-top,
+#login .portfolio-experiment a:active .line.-top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+#login .portfolio-experiment a:hover .line.-left,
+#login .portfolio-experiment a:active .line.-left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+#login .portfolio-experiment a:hover .line.-bottom,
+#login .portfolio-experiment a:active .line.-bottom {
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transform-origin: left;
+}
+#login .round {
+  position: relative;
+}
+#login .round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+#login .round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+#login .round input[type=checkbox] {
+  visibility: hidden;
+}
+#login .round input[type=checkbox]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+#login .round input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+#login html,
+#login body {
+  height: 100%;
+  margin: 0;
+}
+#login body {
+  align-items: center;
+  background-color: #f1f2f3;
+  display: flex;
+}
+#login .container {
+  margin: 0 auto;
+}
+#login img {
+  width: 543px;
+  height: 576px;
+  margin-left: 100px;
+}
+#login .login-area {
+  width: 600px;
+  height: 400px;
+  border: 1px solid black;
+  margin-top: 120px;
+  margin-left: -50px;
+  border-radius: 15px;
+  background-color: whitesmoke;
+}
+#login .login-area .email {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+}
+#login .login-area .email input {
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  border: 0;
+  border-radius: 4px;
+  line-height: 24px;
+  padding: 8px 36px 8px 14px;
+  box-shadow: 0 4px 12px -2px rgba(107, 117, 161, 0.16);
+  color: #797C86;
+}
+#login .login-area .email input::-webkit-input-placeholder {
+  color: #C7C8CC;
+}
+#login .login-area .email input:-moz-placeholder {
+  color: #C7C8CC;
+}
+#login .login-area .email input::-moz-placeholder {
+  color: #C7C8CC;
+}
+#login .login-area .email input:-ms-input-placeholder {
+  color: #C7C8CC;
+}
+#login .login-area .email svg {
+  position: absolute;
+  z-index: 1;
+  right: 14px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  margin: -10px 0 0 0;
+}
+#login .login-area .email svg polyline,
+#login .login-area .email svg path {
+  stroke: #D1D7E3;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s ease 0s;
+}
+#login .login-area .email svg path {
+  stroke-dasharray: 64;
+  stroke-dashoffset: 127;
+  transition: stroke-dasharray 0.8s ease 0.8s, stroke-dashoffset 0.8s ease 0.5s;
+}
+#login .login-area .email svg polyline {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+#login .login-area .email.success svg polyline,
+#login .login-area .email.success svg path {
+  stroke: #69DD95;
+}
+#login .login-area .email.success svg path {
+  stroke-dasharray: 46;
+  stroke-dashoffset: 150;
+  transition: stroke-dasharray 0.6s ease 0s, stroke-dashoffset 0.8s ease 0.3s, stroke 0.3s ease 0.6s;
+}
+#login .login-area .email.success svg polyline {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.5s ease 0.6s, stroke 0.3s ease 0.6s;
+}
+#login .login-area html {
+  box-sizing: border-box;
+}
+#login .login-area * {
+  box-sizing: inherit;
+}
+#login .login-area *:before, #login .login-area *:after {
+  box-sizing: inherit;
+}
+#login .login-area body {
+  min-height: 100vh;
+  font-family: Roboto, Arial;
+  color: #ADAFB6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAFAFC;
+}
+#login .login-area body .dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+#login .login-area body .dribbble:hover {
+  opacity: 1;
+}
+#login .login-area body .dribbble img {
+  display: block;
+  height: 36px;
+}
+
+#footer {
+  color: whitesmoke;
+  width: 100%;
+  background-color: black;
+}
+#footer p {
+  cursor: pointer;
+}
+#footer a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+#footer a::before,
+#footer a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+#footer a::before {
+  background-color: #ff5722;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+#footer a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #ff5722;
+}
+#footer a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+#footer a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+#footer a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+#footer a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+#footer a {
+  text-decoration: none;
+  color: #ff5722;
+  font-weight: 700;
+  vertical-align: top;
+  color: whitesmoke;
+}/*# sourceMappingURL=login.css.map */

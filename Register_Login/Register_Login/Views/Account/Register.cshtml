@@ -1,0 +1,43 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container my-5">
+    <div class="row d-flex justify-content-center">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="input-area" style=" width: 500px; background-color: darkslategrey; padding: 20px;margin-bottom:20px;">
+            <form asp-controller="Account" asp-action="Register" method="post"enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label asp-for="Fullname"  class="form-label">Full Name</label>
+                    <input  class="form-control" autocomplete="off"  asp-for="Fullname"/>
+                    <span class="text-danger" asp-validation-for="Fullname"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input class="form-control" autocomplete="off" asp-for="Email" />
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label">Username</label>
+                    <input class="form-control" autocomplete="off" asp-for="Username" />
+                    <span class="text-danger" asp-validation-for="Username"></span>
+                </div>
+                <div class="mb-3"
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input class="form-control" asp-for="Password" />
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </div>
+                <div class="mb-3"
+                    <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
+                    <input class="form-control" asp-for="ConfirmPassword" />
+                    <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                </div>
+                <div class="register-btn d-flex justify-content-center" style="width:100%">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

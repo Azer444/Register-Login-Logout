@@ -1,0 +1,28 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container my-5">
+    <div class="row d-flex justify-content-center">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="input-area" style=" width: 500px; background-color: darkslategrey; padding: 20px;margin-bottom:20px;">
+            <h3 style="text-align:center">Login</h3>
+            <form asp-controller="Account" asp-action="Login" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label asp-for="UsernameOrEmail" class="form-label">Email or Username</label>
+                    <input class="form-control" autocomplete="off" asp-for="UsernameOrEmail" />
+                    <span class="text-danger" asp-validation-for="UsernameOrEmail"></span>
+                </div>
+                <div class="mb-3"
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input class="form-control" asp-for="Password" />
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </div>
+                <div class="register-btn d-flex justify-content-center" style="width:100%">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

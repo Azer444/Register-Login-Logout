@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b895d72c8b.js" defer crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" type="image/x-icon" href="~/./assets/img/000080_Navy_Blue_Square.svg.png">
+    <link rel="stylesheet" href="~/./assets/scss/login/login.css">
+    <link rel="stylesheet" href="~/./assets/scss/register/register.css">
+    <link rel="stylesheet" href="~/./assets/scss/home.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <section id="top-side">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 d-flex ">
+                    <div class="language">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle button1" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="country">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle button2" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                USA
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li class="usa-flex">
+                                    <div class="usa-flag">  <img src="~/./assets/img/usa.png"></div><a class="dropdown-item" href="#">USA</a>
+                                </li>
+                                <li class="nzd-flex">
+                                    <div class="nzd-flag">  <img src="~/./assets/img/nzd.png"></div><a class="dropdown-item" href="#">NZD</a>
+                                </li>
+                                <li class="gmd-flex">
+                                    <div class="gmd-flag">  <img src="~/./assets/img/gmd.png"></div><a class="dropdown-item" href="#">GMD</a>
+                                </li>
+                                <li class="ilr-flex">
+                                    <div class="ilr-flag">  <img src="~/./assets/img/ilr.png"></div><a class="dropdown-item" href="#">ILR</a>
+                                </li>
+                                <li class="eur-flex">
+                                    <div class="eur-flag">  <img src="~/./assets/img/eur.png"></div><a class="dropdown-item" href="#">EUR</a>
+                                </li>
+                                <li class="inr-flex">
+                                    <div class="inr-flag">  <img src="~/./assets/img/iran.jpg"></div><a class="dropdown-item" href="#">INR</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="logo">
+                        <img src="~/./assets/img/logos white.png" alt="">
+                    </div>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-2 d-flex">
+                    <div class="basket">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="circles"><sup>0</sup></div>
+                    </div>
+                    <div class="heart">
+                        <i class="fa-solid fa-heart"></i>
+                        <div class="circles"><sup>0</sup></div>
+                    </div>
+                    <div class="profile">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-secondary  button3" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                <img src="~/./assets/img/loginphoto.jpg">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="profile-i">
+                                    <i class="fa-solid fa-user"></i> <a class="dropdown-item"
+                                                                       asp-controller="Account" asp-action="Register" >Profile</a>
+                                </li>
+                                <li class="account-i">
+                                    <i class="fa-solid fa-gear"></i> <a class="dropdown-item"
+                                                                       href="#" >Account</a>
+                                </li>
+                                <li class="message-i">
+                                    <i class="fa-solid fa-envelope"></i> <a class="dropdown-item"
+                                                                            href="#">Message</a>
+                                </li>
+                                <li class="logout-i">
+                                    <i class="fa-solid fa-power-off"></i> <a class="dropdown-item"
+                                                                             href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav>
+                        <ul class="btn">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li><h4>@User.Identity.Name</h4></li>
+                                <li><a class="hov" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                            }
+                            <li><a class="hov" asp-controller="Account" asp-action="Login">Login</a></li>
+                            <li><a class="hov" asp-controller="Account" asp-action="Register">Register</a></li>
+
+                        </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+    </section>
+    @RenderBody()
+    <section id="footer">
+        <div class="container-fluid ">
+            <div class="row">
+                <footer class="container">
+                    <section>
+                    </section>
+                    <section>
+                        <div class="container-fluid">
+                            <div class="row my-5">
+                                <div class="col-4">
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        <i class="fas fa-gem me-3"></i>ABOUT COMPANY
+                                    </h6>
+
+                                    <span>
+                                        Here you can use rows and columns here to organize your footer content.Lorem
+                                        ipsum dolor sit amet,consectetur adipisicing elit. Here you can use rows and
+                                        columns here to organize your footer content. Lorem ipsum dolor sit amet,
+                                        consectetur adipisicing elit.
+                                    </span>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        ABOUT
+
+                                    </h6>
+                                    <p><a href="#" id="style-2" data-replace="About us"><span>About us</span></a></p>
+                                    <p>
+                                        <a href="#" id="style-2" data-replace="Terms and Condition"><span>Terms and Condition</span></a>
+                                    </p>
+                                    <p><a href="#" id="style-2" data-replace="Privacy Policy"><span>Privacy Policy</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="FAQ"><span>FAQ</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Contact Us"><span>Contact Us</span></a></p>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        SESSION
+                                    </h6>
+                                    <p><a href="#" id="style-2" data-replace="Session"><span>Session</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Rign in"><span>Sign in</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Register"><span>Register</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="forget password"><span>forget password</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Contact Us"><span>thanks you</span></a></p>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        CATEGORIES
+                                    </h6>
+                                    <p><a href="#" id="style-2" data-replace="Women"><span>Women</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Men"><span>Men</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Accessories"><span>Accessories</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Gadgets"><span>Gadgets</span></a></p>
+                                </div>
+                                <div class="col-2">
+                                    <h6 class="text-uppercase fw-bold mb-4">Social</h6>
+                                    <p><a href="#" id="style-2" data-replace="Facebook"><span>Facebook</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Twitter"><span>Twitter</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Youtube"><span>Youtube</span></a></p>
+                                    <p><a href="#" id="style-2" data-replace="Google Plus"><span>Google Plus</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/b895d72c8b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/b895d72c8b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="./assets/js/home.js"></script>
+</body>
+
+</html>
